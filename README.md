@@ -1,4 +1,5 @@
 [ Projeto simples com TDD ]
+  - Projeto sendo acompanhando pelo curso do Jackson Pires - TDDcom Ruby on Rails, RSpec e Capybara.
 
 Um teste do padrão xUnit tem quatro fases, são elas:
   - Setup: Quando você coloca o SUT (system under test, o objeto sendo testado) no estado necessário para o teste;
