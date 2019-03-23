@@ -1,22 +1,25 @@
 require 'calculator'
 
-RSpec.describe Calculator do
-  specify 'sum method for two numbers' do
-    calc = Calculator.new
-    result = calc.sum(5, 7)
-    expect(result).to eq(12)
-  end
+describe Calculator do
+  context '#use number integer: ' do
+    specify 'method sum' do
+      result = subject.sum(10, 7)
+      expect(result).to eq(17)
+    end
 
-  example 'sum method for two numbers' do
-    calc = Calculator.new
-    result = calc.sum(5, 7)
-    expect(result).to eq(12)
-  end
+    specify 'method sub' do
+      result = subject.sub(7, 6)
+      expect(result).to eq(1)
+    end
 
-  it 'sum method for two numbers with number negative.' do
-    calc = Calculator.new
-    result = calc.sum(-5, 7)
-    expect(result).to eq(2)
-  end
+    example 'method div' do
+      result = subject.div(15, 3)
+      expect(result).to eq(5)
+    end
 
+    it 'method mult' do
+      result = subject.mult(3, 7)
+      expect(result).to eq(21)
+    end
+  end
 end
