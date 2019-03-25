@@ -8,9 +8,6 @@ describe 'Predicados' do
   end
 end
 
-
-
-
-#be_nil - nil?
-#be_zero - .zero?
-#be_empty - empty?
+# be_nil - nil?
+# be_zero - .zero?
+# be_empty - empty?

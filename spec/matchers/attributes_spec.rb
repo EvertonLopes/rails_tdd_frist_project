@@ -17,6 +17,4 @@ describe 'Classe Pessoa: ' do
       age: (be >= 30) # a_value
     )
   end
-
-
 end

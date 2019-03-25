@@ -16,15 +16,15 @@ describe 'Matchers de Comparação ' do
   end
 
   it 'be_between inclusive' do
-    expect(5).to be_between(2,7).inclusive # Entre esses números.
-    expect(2).to be_between(2,7).inclusive
-    expect(7).to be_between(2,7).inclusive
+    expect(5).to be_between(2, 7).inclusive # Entre esses números.
+    expect(2).to be_between(2, 7).inclusive
+    expect(7).to be_between(2, 7).inclusive
   end
 
   it 'be_between exclusive' do
-    expect(5).to be_between(2,7).exclusive # Dentro do intervalo desses números.
-    expect(3).to be_between(2,7).exclusive
-    expect(6).to be_between(2,7).exclusive
+    expect(5).to be_between(2, 7).exclusive # Dentro do intervalo desses números.
+    expect(3).to be_between(2, 7).exclusive
+    expect(6).to be_between(2, 7).exclusive
   end
 
   it 'match' do
