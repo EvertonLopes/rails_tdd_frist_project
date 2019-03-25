@@ -1,7 +1,7 @@
 require 'calculator'
 
-describe Calculator, "- Teste de Matemática" do
-  context '#use number integer: ' do
+describe Calculator, '- Teste de Matemática' do
+  context '# Use number integer: ' do
     specify 'method sum' do
       result = subject.sum(10, 7)
       expect(result).to eq(17)
@@ -13,7 +13,7 @@ describe Calculator, "- Teste de Matemática" do
     end
 
     example 'method div' do
-      expect(subject.div(15, 3)).to eq(5)
+      expect(subject.div(8, 2)).to eq(4)
     end
 
     xit 'method mult' do
@@ -21,12 +21,24 @@ describe Calculator, "- Teste de Matemática" do
       expect(result).to eq(21)
     end
   end
+
+  context '# Usando raise para erros' do
+    it 'dividindo por zero' do
+      expect { subject.div(8, 0) }.to raise_error(ZeroDivisionError)
+      expect { subject.div(8, 0) }.to raise_error('divided by 0')
+      expect { subject.div(8, 0) }.to raise_error(ZeroDivisionError,
+                                                  'divided by 0')
+    end
+  end
 end
 
-# subject implícito
-#   result = subject.sum(x, y) # Não precisa instânciar a classe.
+# expect { subject.div(8, 0) }.to raise_exception - gera um aviso!
+# expect { subject.div(8, 0) }.to raise_error(/divided/)
 
-# subject explícito
+# subject implicito
+#   result = subject.sum(x, y) # Nao precisa instanciar a classe.
+
+# subject explicito
 #   subject(:variavel) { described_class.new() } # Demostro a chamada da classe.
 #   result = variavel.sum(x, y)
 
