@@ -12,9 +12,11 @@ Incialização do projeto
   Crie um diretório para armazenar o projeto,
   Vá para dentro do diretório crie o arquivo Gemfile
   Abra o arquivo Gemfile e digite o seguinte código {
+
     source 'https://rubygems.org'
 
     gem 'rspec', '~> 3.8'
+    
   },
   Ainda dentro de diretório digite o seguinte comando: gem install bundle,
   Logo após ser executado o comando acima, digite: bundle install,
