@@ -17,10 +17,11 @@ Incialização do projeto
 
     gem 'rspec', '~> 3.8'
     
-  },
-  Ainda dentro de diretório digite o seguinte comando: gem install bundle,
-  Logo após ser executado o comando acima, digite: bundle install,
-  Agora vamos iniciar o rspec no projeto, digite: rspec --init - Esse comando irá criar uma pasta e um arquivo.
-  Cria um diretório nomeado com: lib.
-  
-  Com esses passos você já pode iniciar seu aprendizado com RSpec, boa sorte!
+  }
+
+Ainda dentro de diretório digite o seguinte comando: gem install bundle,
+Logo após ser executado o comando acima, digite: bundle install,
+Agora vamos iniciar o rspec no projeto, digite: rspec --init - Esse comando irá criar uma pasta e um arquivo.
+Cria um diretório nomeado com: lib.
+
+Com esses passos você já pode iniciar seu aprendizado com RSpec, boa sorte!
