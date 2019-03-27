@@ -1,35 +1,24 @@
 describe 'Matchers de Comparação ' do
-  it 'Maior: >' do
+  it 'Maior: >, Maior igual: >=' do
     expect(5).to be > 1
-  end
-
-  it 'Maior igual: >=' do
     expect(5).to be >= 5
   end
 
-  it 'Menor: <' do
+  it 'Menor: <, Menor igual: <=' do
     expect(5).to be < 10
-  end
-
-  it 'Menor igual: <=' do
     expect(5).to be <= 5
   end
 
   it 'be_between inclusive' do
-    expect(5).to be_between(2, 7).inclusive # Entre esses números.
-    expect(2).to be_between(2, 7).inclusive
-    expect(7).to be_between(2, 7).inclusive
+    expect(5).to be_between(2, 7).inclusive # Entre esses numeros
   end
 
   it 'be_between exclusive' do
-    expect(5).to be_between(2, 7).exclusive # Dentro do intervalo desses números.
-    expect(3).to be_between(2, 7).exclusive
-    expect(6).to be_between(2, 7).exclusive
+    expect(5).to be_between(2, 7).exclusive # Dentro do intervalo desses numeros
   end
 
   it 'match' do
-    expect('fulano@com.br').to match(/..@../) # Expressões Regulares.
-    expect('125896').to match(/..8../) # Somente com String.
+    expect('fulano@com.br').to match(/..@../) # Expressoes Regulares (Strings)
     # expect(125896).to match(/..8../) # Error
   end
 
