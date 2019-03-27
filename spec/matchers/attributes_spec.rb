@@ -1,12 +1,20 @@
 require 'pessoa'
 
 RSpec.describe 'Matcher of Attributes: ' do
-  before(:each) do
+  # before(:each) do
+  #   puts 'Starting test'
+  #   @pessoa = Pessoa.new
+  # end
+
+  # after(:example) do
+  #   @pessoa.name = 'Witouth name!'
+  #   puts "finish test, name: '#{@pessoa.name}'"
+  # end
+
+  around(:each) do |teste|
     puts 'Starting test'
     @pessoa = Pessoa.new
-  end
-
-  after(:example) do
+    teste.run
     @pessoa.name = 'Witouth name!'
     puts "finish test, name: '#{@pessoa.name}'"
   end
