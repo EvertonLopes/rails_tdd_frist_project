@@ -1,4 +1,4 @@
-[ Projeto simples com TDD (Test Driven Development) ]
+# Projeto simples com TDD (Test Driven Development)
   - Projeto sendo acompanhando pelo curso do Jackson Pires - TDDcom Ruby on Rails, RSpec e Capybara.
 
 Um teste do padrão xUnit tem quatro fases, são elas:
