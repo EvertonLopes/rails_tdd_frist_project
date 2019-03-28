@@ -1,12 +1,13 @@
 # Matcher Change
-class Count
-  @qtd = 0
+class Counter
+  class << self
+    def increment
+      @qtd ||= 0
+      @qtd += 1
+    end
 
-  def self.qtd
-    @qtd = @qtd
-  end
-
-  def self.increment
-    @qtd += 1
+    def qtd
+      @qtd ||= 0
+    end
   end
 end

@@ -1,7 +1,6 @@
-$count = 0
-
 RSpec.describe 'Hook Let' do
-  let(:count) { $count += 1 }
+  main_count = 0
+  let(:count) { main_count += 1 }
 
   it 'memoizes the value' do
     expect(count).to eq(1)
