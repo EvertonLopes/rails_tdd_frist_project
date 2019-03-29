@@ -33,6 +33,10 @@ RSpec.configure do |config|
     puts '~~~~~~~~~~~~~~~~ END. ~~~~~~~~~~~~~~~~~~~~~~~~~~~'
   end
 
+  config.define_derived_metadata do |meta|
+    meta[:aggregate_failures] = true
+  end
+
   # Helper methods of molude
   config.include Helper
 
