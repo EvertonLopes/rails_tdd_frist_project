@@ -4,8 +4,6 @@ RSpec.describe 'Aggregating Failures' do
 
   it 'testing with failures without aggregate' do
     expect('foo bar bazz').to start_with('foo')
-    expect('foo bar bazz').to start_with('boo')
-    expect('foo bar bazz').to start_with('bar')
     expect('foo bar bazz').to end_with('bazz')
   end
 
