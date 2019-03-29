@@ -1,7 +1,7 @@
 require 'pessoa'
 
 RSpec.shared_examples 'status' do |sentimento|
-  it "#{sentimento}" do
+  it sentimento.to_s do
     pessoa.send("#{sentimento}!")
     expect(pessoa.status).to eq("Sentindo-se #{sentimento.capitalize}!")
   end

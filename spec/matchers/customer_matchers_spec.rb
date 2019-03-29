@@ -1,6 +1,6 @@
 RSpec::Matchers.define :be_a_multiple_of do |expected|
   match do |actual|
-    actual % expected == 0
+    (actual % expected).zero?
   end
   description do
     "be multiple of #{expected}"
@@ -16,17 +16,8 @@ end
 RSpec.describe 9 do
   context 'using Customer Matchers' do
     it { is_expected.to be_a_multiple_of(3) }
+    it { is_expected.not_to be_a_multiple_of(4) }
+    it { is_expected.to_not be_a_multiple_of(3) }
+    it { is_expected.to be_a_multiple_of(4) }
   end
-end
-
-RSpec.describe 9, ' - Customer Matchers' do
-  it { is_expected.not_to be_a_multiple_of(4) }
-end
-
-RSpec.describe 9, ' - Customer Matchers' do
-  it { is_expected.to_not be_a_multiple_of(3) }
-end
-
-RSpec.describe 9, ' - Customer Matchers' do
-  it { is_expected.to be_a_multiple_of(4) }
 end
